@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,900&display=swap');
+
+$AppBg1 : #351CA4;
+$AppBg2: #E5E5E5;
+$white: #FFFFFF;
+$infographicBG: #F9F9F9;
+$navSelected: #70CCA8;
+$addButtonColor : #6CCAA9;
+$inputPlaceholder: #ABAFB3;
+$formText: #464A53;
+$footerText: #949494;
+$inputBorder: #DDDFE1;
+
+@mixin form-button {
+  background-color: #6CCAA9;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    color: $white;
+    border: $white;
+    float: right;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  .app-bg {
+    width: 113vw;
+    height: 75vw;
+    background-color: #351CA4;
+    position: fixed;
+    transform: rotate(-200deg) skewX(50deg);
+    top: -30vw;
+    left: -15vw;
+    z-index: -1;
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width: 640px) {
+    .app-bg {
+      width: 150vw;
+      height: 120vw;
+      top: -36vw;
+      left: -45vw;
+    }
+  }
+}
