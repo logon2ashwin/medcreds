@@ -1,0 +1,54 @@
+@import "../../commons/app.scss";
+
+.App-heading {
+  position: absolute;
+  top: 15%;
+  left: 11%;
+  cursor: default;
+  h3 {
+    color: $white;
+  }
+  p {
+    color: $navSelected;
+  }
+}
+
+.form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -40%);
+}
+
+@media screen and (max-width: 768px) {
+  .App-heading {
+    top: 11%;
+    h3 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) { 
+  .App-heading {
+    top: 10%;
+    h3 {
+      font-size: 19px;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) { 
+  .App-heading {
+    display: none;
+  }
+  .form {
+    top: 42%;
+  }
+}

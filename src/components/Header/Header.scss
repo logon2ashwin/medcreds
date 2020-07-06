@@ -1,0 +1,126 @@
+@import "../../commons/app.scss";
+
+.app-header {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  .header-row {
+    height: 100%;
+    .app-icon {
+      padding: 1em 0 0 2em;
+      .app-icon-svg {
+        width: 115px;
+        height: 50px;
+        cursor: pointer;
+      }
+    }
+    .header-col {
+      .links {
+        display: inline;
+        label {
+          &.header-label {
+            position: relative;
+            color: $white;
+            margin: 1rem;
+            cursor: pointer;
+          }
+          &::before {
+            z-index: -1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: $navSelected;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: 0.3s transform ease-in-out;
+          }
+          &:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+      }
+      &.profile {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .profile-pic {
+          border-radius: 50px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+        }
+        .profile-name {
+          color: $white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app-header {
+    .header-row {
+      .app-icon {
+        padding: 0.5rem 0 0 1.5rem;
+        .app-icon-svg {
+          width: 100px;
+          height: 50px;
+        }
+      }
+      .header-col {
+        .links {
+          label {
+            display: none;
+          }
+        }
+        &.profile {
+          .profile-name {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .app-header {
+    .header-row {
+      .app-icon {
+        padding: 0.5rem 0 0 1.5rem;
+        .app-icon-svg {
+          width: 75px;
+          height: 45px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .app-header {
+    height: 3rem;
+    .header-row {
+      .app-icon {
+        padding: 0.5rem 0 0 1.5rem;
+        .app-icon-svg {
+          width: 60px;
+          height: 30px;
+        }
+      }
+      &.profile {
+        .profile-pic {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

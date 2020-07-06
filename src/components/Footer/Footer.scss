@@ -1,0 +1,40 @@
+@import "../../commons/app.scss";
+
+.footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100vw;
+  height: 2rem;
+  box-shadow: -2px -4px 10px rgba(0, 0, 0, 0.1);
+  p {
+    color: $footerText;
+    margin-bottom: 0;
+    &.left {
+      margin-left: 0.5rem;
+      justify-self: flex-start;
+    }
+    &.right {
+      margin-right: 0.5rem;
+      justify-self: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) { 
+  .footer {
+    p {
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) { 
+  .footer {
+    p {
+      font-size: 8px;
+    }
+  }
+}

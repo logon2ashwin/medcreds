@@ -1,0 +1,55 @@
+@import "../../commons/app.scss";
+
+.org-form {
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  background-color: $white;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+  .svg-section {
+    width: 35%;
+    padding: 0rem 1.5rem;
+    background-color: $infographicBG;
+  }
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+    margin: 2rem;
+  }
+  .form-submit {
+    width: 100px;
+    height: 40px;
+    align-self: flex-end;
+    @include form-button
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .org-form {
+    height: 70vh;
+    .svg-section{
+      display: none;
+    }
+    .form-section {
+      width: 100%;
+    }
+    .form-submit {
+      width: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) { 
+  .org-form {
+    height: 75vh;
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 320px) { 
+  .org-form {
+    height: 84vh;
+  }
+}
